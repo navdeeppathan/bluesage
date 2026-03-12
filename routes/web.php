@@ -19,6 +19,8 @@ Route::get('/admin-register', [AuthController::class, 'showRegister'])->name('ad
 Route::post('/admin-register', [AuthController::class, 'register'])->name('admin.register.store');
 
 Route::get('/admin-login', [AuthController::class, 'showLogin'])->name('admin.login');
+Route::get('/', [AuthController::class, 'showLogin'])->name('admin.login');
+
 Route::post('/admin-login', [AuthController::class, 'login'])->name('admin.login.check');
 
 Route::post('/admin-logout', [AuthController::class, 'logout'])->name('admin.logout');
@@ -35,6 +37,3 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
 
 });
 
-Route::get('/', function () {
-    return view('welcome');
-});
