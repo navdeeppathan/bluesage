@@ -31,7 +31,7 @@
 
     /* LEFT PANEL */
     .login-left{
-        background:linear-gradient(135deg,#CF242A,#ab050b);
+        background:linear-gradient(135deg,#0c0c0c,#0c0c0c);
         color:#fff;
         padding:50px;
         position:relative;
@@ -67,7 +67,7 @@
 
     .login-right h4{
         font-weight:700;
-        color:#CF242A;
+        color:#0c0c0c;
     }
 
     .form-control{
@@ -79,12 +79,12 @@
 
     .form-control:focus{
         box-shadow:none;
-        border:2px solid #CF242A;
+        border:2px solid #0c0c0c;
         background:#fff;
     }
 
     .login-btn{
-        background:#CF242A;
+        background:#0c0c0c;
         border:none;
         padding:14px;
         width:100%;
