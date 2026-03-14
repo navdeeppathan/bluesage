@@ -1016,6 +1016,209 @@
                     <span class="nav-text">Blogs</span>
                 </a>
             </div>
+
+            @php
+            $homeActive =
+                Request::is('admin/banners*') ||
+                Request::is('admin/testimonials*') ||
+                Request::is('admin/counters*') ||
+                Request::is('admin/client-testimonials*')||
+                Request::is('admin/insights*') ||
+                Request::is('admin/client-logos*') ||
+                Request::is('admin/awards*');
+
+            @endphp
+
+            <div class="nav-item {{ $homeActive ? 'open' : '' }}">
+                <a href="javascript:void(0)"
+                class="nav-link {{ $homeActive ? 'active' : '' }}"
+                onclick="toggleDropdown(this)">
+
+                    <span class="nav-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 9.75L12 4l9 5.75V19a2 2 0 01-2 2h-5a2 2 0 01-2-2v-4H10v4a2 2 0 01-2 2H3a2 2 0 01-2-2V9.75z"/>
+                        </svg>
+                    </span>
+
+                    <span class="nav-text">Home Page</span>
+
+                    <span class="dropdown-arrow {{ $homeActive ? 'rotate' : '' }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </span>
+                </a>
+
+                <div class="sidebar-dropdown">
+                    <a href="{{ route('admin.banners.index') }}"
+                    class="dropdown-item {{ Request::is('admin/banners*') ? 'active' : '' }}">
+                    Banners
+                    </a>
+
+                    <a href="{{ route('admin.counters.index') }}"
+                    class="dropdown-item {{ Request::is('admin/counters*') ? 'active' : '' }}">
+                    Counters
+                    </a>
+
+                    <a href="{{ route('admin.client.testimonials.index') }}"
+                    class="dropdown-item {{ Request::is('admin/client-testimonials*') ? 'active' : '' }}">
+                    Client Testimonials
+                    </a>
+
+                    <a href="{{ route('admin.testimonials.index') }}"
+                    class="dropdown-item {{ Request::is('admin/testimonials*') ? 'active' : '' }}">
+                    Testimonials
+                    </a>
+
+                    <a href="{{ route('admin.insights.index') }}"
+                    class="dropdown-item {{ Request::is('admin/insights*') ? 'active' : '' }}">
+                    Insights
+                    </a>
+
+                    <a href="{{ route('admin.awards.index') }}"
+                    class="dropdown-item {{ Request::is('admin/awards*') ? 'active' : '' }}">
+                    Awards
+                    </a>
+
+                    <a href="{{ route('admin.client.logos.index') }}"
+                    class="dropdown-item {{ Request::is('admin/client-logos*') ? 'active' : '' }}">
+                    Client Logos
+                    </a>
+
+                    
+                </div>
+            </div>
+
+
+            @php
+            $aboutActive =
+                Request::is('admin/journeys*') ||
+                Request::is('admin/testimonials*');
+
+            @endphp
+
+            <div class="nav-item {{ $aboutActive ? 'open' : '' }}">
+                <a href="javascript:void(0)"
+                class="nav-link {{ $aboutActive ? 'active' : '' }}"
+                onclick="toggleDropdown(this)">
+
+                    <span class="nav-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 9.75L12 4l9 5.75V19a2 2 0 01-2 2h-5a2 2 0 01-2-2v-4H10v4a2 2 0 01-2 2H3a2 2 0 01-2-2V9.75z"/>
+                        </svg>
+                    </span>
+
+                    <span class="nav-text">About Page</span>
+
+                    <span class="dropdown-arrow {{ $aboutActive ? 'rotate' : '' }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </span>
+                </a>
+
+                <div class="sidebar-dropdown">
+                    <a href="{{ route('admin.journeys.index') }}"
+                    class="dropdown-item {{ Request::is('admin/journeys*') ? 'active' : '' }}">
+                    Journeys
+                    </a>
+
+                    <a href="{{ route('admin.team.members.index') }}"
+                    class="dropdown-item {{ Request::is('admin/team-members*') ? 'active' : '' }}">
+                    Team Members
+                    </a>
+                    
+                </div>
+            </div>
+
+             @php
+            $serviceActive =
+                Request::is('admin/journeys*') ||
+                Request::is('admin/testimonials*');
+
+            @endphp
+
+            <div class="nav-item {{ $serviceActive ? 'open' : '' }}">
+                <a href="javascript:void(0)"
+                class="nav-link {{ $serviceActive ? 'active' : '' }}"
+                onclick="toggleDropdown(this)">
+
+                    <span class="nav-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 9.75L12 4l9 5.75V19a2 2 0 01-2 2h-5a2 2 0 01-2-2v-4H10v4a2 2 0 01-2 2H3a2 2 0 01-2-2V9.75z"/>
+                        </svg>
+                    </span>
+
+                    <span class="nav-text">Service Page</span>
+
+                    <span class="dropdown-arrow {{ $serviceActive ? 'rotate' : '' }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </span>
+                </a>
+
+                <div class="sidebar-dropdown">
+                    <a href="{{ route('admin.services.index') }}"
+                    class="dropdown-item {{ Request::is('admin/services*') ? 'active' : '' }}">
+                    Services
+                    </a>
+
+                    <a href="{{ route('admin.highlights.index') }}"
+                    class="dropdown-item {{ Request::is('admin/highlights*') ? 'active' : '' }}">
+                    Highlights
+                    </a>
+                    
+                </div>
+            </div>
+
+
+            @php
+            $partnersActive =
+                Request::is('admin/journeys*') ||
+                Request::is('admin/testimonials*');
+
+            @endphp
+
+            <div class="nav-item {{ $partnersActive ? 'open' : '' }}">
+                <a href="javascript:void(0)"
+                class="nav-link {{ $partnersActive ? 'active' : '' }}"
+                onclick="toggleDropdown(this)">
+
+                    <span class="nav-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 9.75L12 4l9 5.75V19a2 2 0 01-2 2h-5a2 2 0 01-2-2v-4H10v4a2 2 0 01-2 2H3a2 2 0 01-2-2V9.75z"/>
+                        </svg>
+                    </span>
+
+                    <span class="nav-text">Service Page</span>
+
+                    <span class="dropdown-arrow {{ $partnersActive ? 'rotate' : '' }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </span>
+                </a>
+
+                <div class="sidebar-dropdown">
+                    <a href="{{ route('admin.offerings.index') }}"
+                    class="dropdown-item {{ Request::is('admin/offerings*') ? 'active' : '' }}">
+                    Offerings
+                    </a>
+
+                    <a href="{{ route('admin.highlights.index') }}"
+                    class="dropdown-item {{ Request::is('admin/highlights*') ? 'active' : '' }}">
+                    Highlights
+                    </a>
+                    
+                </div>
+            </div>
+
+           
              
 
         </nav>
