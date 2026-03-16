@@ -89,7 +89,7 @@ rows="3"></textarea>
 <th>Client</th>
 <th>Rating</th>
 <th>Status</th>
-<th width="260">Actions</th>
+<th>Actions</th>
 </tr>
 </thead>
 

@@ -9,8 +9,8 @@ class ContentSectionController extends Controller
 {
     public function index()
     {
-        $sections = ContentSection::latest()->get();
-        return view('admin.content-sections.index', compact('sections'));
+        $section = ContentSection::first();
+        return view('admin.content-sections.index', compact('section'));
     }
 
     public function store(Request $request)
@@ -20,37 +20,15 @@ class ContentSectionController extends Controller
             'content' => 'nullable|string',
         ]);
 
-        ContentSection::create([
-            'title' => $request->title,
-            'content' => $request->content,
-            'status' => $request->status ? 1 : 0
-        ]);
+        ContentSection::updateOrCreate(
+            ['id' => 1], // single record
+            [
+                'title' => $request->title,
+                'content' => $request->content,
+                'status' => $request->status ? 1 : 0
+            ]
+        );
 
-        return back()->with('success', 'Section added successfully');
-    }
-
-    public function update(Request $request, $id)
-    {
-        $section = ContentSection::findOrFail($id);
-
-        $request->validate([
-            'title' => 'required|string|max:255',
-            'content' => 'nullable|string',
-        ]);
-
-        $section->update([
-            'title' => $request->title,
-            'content' => $request->content,
-            'status' => $request->status ? 1 : 0
-        ]);
-
-        return back()->with('success', 'Section updated successfully');
-    }
-
-    public function destroy($id)
-    {
-        ContentSection::findOrFail($id)->delete();
-
-        return back()->with('success', 'Section deleted successfully');
+        return back()->with('success', 'Content saved successfully');
     }
 }

@@ -73,7 +73,7 @@ Add Blog
 <th>Blog</th>
 <th>Category</th>
 <th>Date</th>
-<th width="250">Actions</th>
+<th >Actions</th>
 </tr>
 
 </thead>

@@ -70,7 +70,7 @@ Add
 <th>Title</th>
 <th>Description</th>
 <th>Status</th>
-<th width="260">Actions</th>
+<th>Actions</th>
 </tr>
 </thead>
 

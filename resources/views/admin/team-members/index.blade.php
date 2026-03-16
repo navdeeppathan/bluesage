@@ -70,7 +70,7 @@ Add Member
 <th>#</th>
 <th>Member</th>
 <th>Status</th>
-<th width="250">Actions</th>
+<th >Actions</th>
 </tr>
 </thead>
 

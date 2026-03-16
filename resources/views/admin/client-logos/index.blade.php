@@ -64,7 +64,7 @@ Add Logo
 <th>Logo</th>
 <th>Website</th>
 <th>Status</th>
-<th width="250">Actions</th>
+<th >Actions</th>
 </tr>
 </thead>
 

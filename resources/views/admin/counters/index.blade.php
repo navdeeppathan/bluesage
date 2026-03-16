@@ -63,7 +63,7 @@ Add Counter
 <th>Number</th>
 <th>Subtitle</th>
 <th>Status</th>
-<th width="250">Actions</th>
+<th >Actions</th>
 </tr>
 </thead>
 

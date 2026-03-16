@@ -147,10 +147,5 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     Route::get('/content-sections',[ContentSectionController::class,'index'])->name('content.sections.index');
 
     Route::post('/content-sections',[ContentSectionController::class,'store'])->name('content.sections.store');
-
-    Route::put('/content-sections/{id}',[ContentSectionController::class,'update'])->name('content.sections.update');
-
-    Route::delete('/content-sections/{id}',[ContentSectionController::class,'destroy'])->name('content.sections.destroy');
-
 });
 

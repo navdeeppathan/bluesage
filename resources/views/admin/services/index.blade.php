@@ -70,7 +70,7 @@ Add Service
 <th>Icon</th>
 <th>Title</th>
 <th>Status</th>
-<th width="250">Actions</th>
+<th >Actions</th>
 </tr>
 </thead>
 

@@ -1135,8 +1135,8 @@
 
              @php
             $serviceActive =
-                Request::is('admin/journeys*') ||
-                Request::is('admin/testimonials*');
+                Request::is('admin/services*') ||
+                Request::is('admin/highlights*');
 
             @endphp
 
@@ -1178,8 +1178,8 @@
 
             @php
             $partnersActive =
-                Request::is('admin/journeys*') ||
-                Request::is('admin/testimonials*');
+                Request::is('admin/offerings*') ||
+                Request::is('admin/content-sections*');
 
             @endphp
 
@@ -1195,7 +1195,7 @@
                         </svg>
                     </span>
 
-                    <span class="nav-text">Service Page</span>
+                    <span class="nav-text">Partners Page</span>
 
                     <span class="dropdown-arrow {{ $partnersActive ? 'rotate' : '' }}">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1210,9 +1210,9 @@
                     Offerings
                     </a>
 
-                    <a href="{{ route('admin.highlights.index') }}"
-                    class="dropdown-item {{ Request::is('admin/highlights*') ? 'active' : '' }}">
-                    Highlights
+                    <a href="{{ route('admin.content.sections.index') }}"
+                    class="dropdown-item {{ Request::is('admin/content-sections*') ? 'active' : '' }}">
+                    Content
                     </a>
                     
                 </div>

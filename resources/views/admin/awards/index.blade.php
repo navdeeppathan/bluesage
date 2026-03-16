@@ -80,7 +80,7 @@ placeholder="Award Description"></textarea>
 <th>Title</th>
 <th>Year</th>
 <th>Status</th>
-<th width="260">Actions</th>
+<th >Actions</th>
 </tr>
 </thead>
 
