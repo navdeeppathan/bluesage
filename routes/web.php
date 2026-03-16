@@ -6,6 +6,7 @@ use App\Http\Controllers\BannerController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ClientLogoController;
 use App\Http\Controllers\ClientTestimonialController;
+use App\Http\Controllers\ContentSectionController;
 use App\Http\Controllers\CounterController;
 use App\Http\Controllers\HighlightController;
 use App\Http\Controllers\InsightController;
@@ -143,6 +144,13 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
 
     Route::delete('/offerings/{id}',[OfferingController::class,'destroy'])->name('offerings.destroy');
 
+    Route::get('/content-sections',[ContentSectionController::class,'index'])->name('content.sections.index');
+
+    Route::post('/content-sections',[ContentSectionController::class,'store'])->name('content.sections.store');
+
+    Route::put('/content-sections/{id}',[ContentSectionController::class,'update'])->name('content.sections.update');
+
+    Route::delete('/content-sections/{id}',[ContentSectionController::class,'destroy'])->name('content.sections.destroy');
 
 });
 

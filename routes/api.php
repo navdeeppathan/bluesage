@@ -18,4 +18,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+use App\Http\Controllers\Api\HomeController;
+
+Route::get('/home', [HomeController::class, 'home']);
+
 Route::get('/blogs', [App\Http\Controllers\BlogController::class, 'apiIndex']);
